@@ -1,0 +1,10 @@
+.article {
+  background-image: url("https://s1.eestatic.com/2023/10/10/el-cultural/cine/800930664_236717553_1706x960.jpg");
+  @apply h-1/2 bg-cover bg-center bg-no-repeat;
+}
+.containner {
+  @apply flex flex-col items-start justify-end px-40
+  text-white w-full 
+  bg-cover bg-center bg-no-repeat 
+  bg-gradient-to-t to-transparent from-gray-950 h-full;
+}

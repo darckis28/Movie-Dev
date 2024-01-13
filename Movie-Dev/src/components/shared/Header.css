@@ -1,0 +1,21 @@
+.header {
+  @apply flex justify-between px-28 pt-6 items-center absolute w-full top-0 left-0;
+}
+.nav {
+  @apply flex gap-20 items-center;
+}
+.containner--nav {
+  @apply flex gap-5 font-light text-sm;
+}
+.link {
+  @apply text-white hover:text-yellow-400 flex items-center gap-1;
+}
+.input {
+  @apply rounded-full px-3 py-2 pr-8 w-48 text-sm text-white bg-opacity-black focus:w-56 border border-yellow-600  focus:outline focus:outline-1 focus:outline-yellow-200 placeholder:text-gray-100 placeholder:font-extralight placeholder:text-sm;
+}
+.containner--link {
+  @apply relative p-1;
+}
+.containner--link:hover > div {
+  @apply scale-100;
+}
