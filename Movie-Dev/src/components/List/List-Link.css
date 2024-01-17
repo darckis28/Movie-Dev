@@ -1,10 +1,11 @@
 .sub--link {
-  @apply text-white bg-gray-800 flex flex-col flex-wrap max-h-52 w-max gap-x-1 p-2 absolute -left-1 translate-y-1 rounded-md  scale-0 hover:scale-100 transition-all
-  before:w-0 before:h-0
-  before:absolute before:-top-2 before:left-3
-  before:border-b-8 before:border-b-gray-800
-  before:border-l-4 before:border-l-transparent
-  before:border-r-4 before:border-r-transparent;
+  @apply text-white flex flex-col flex-wrap max-h-52 gap-x-1 p-2  transition-all
+  lg:w-max lg:bg-gray-800 lg:-left-1 lg:translate-y-1 lg:rounded-md lg:absolute   lg:scale-0 lg:hover:scale-100
+  lg:before:w-0 lg:before:h-0
+  lg:before:absolute lg:before:-top-2 lg:before:left-3
+  lg:before:border-b-8 lg:before:border-b-gray-800
+  lg:before:border-l-4 lg:before:border-l-transparent
+  lg:before:border-r-4 lg:before:border-r-transparent;
 }
 .sub--link a {
   @apply text-nowrap p-2 rounded-md hover:bg-gray-950 hover:text-yellow-400;

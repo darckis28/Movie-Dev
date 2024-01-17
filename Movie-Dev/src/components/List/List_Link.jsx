@@ -1,6 +1,5 @@
 import "./List-Link.css";
 function List_Link({ category, href }) {
-  console.log(category);
   return (
     <div className="sub--link">
       {category.map((cate, idx) => (
