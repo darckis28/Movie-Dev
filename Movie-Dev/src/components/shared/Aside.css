@@ -1,0 +1,6 @@
+.btn--aside {
+  @apply w-1/2 p-2 font-light  text-center border-b-2 border-transparent;
+}
+.btn--aside.active {
+  @apply border-b-2 border-yellow-600;
+}

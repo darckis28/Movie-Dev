@@ -1,0 +1,6 @@
+.btn--peliculasOn {
+  @apply py-2 border-b-2 font-thin border-transparent text-sm;
+}
+.btn--peliculasOn.active {
+  @apply border-yellow-500 font-semibold;
+}

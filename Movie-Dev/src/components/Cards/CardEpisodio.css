@@ -1,0 +1,15 @@
+.containner-card-episodio {
+  @apply relative cursor-pointer;
+}
+.icon {
+  @apply text-6xl text-gray-300 absolute left-1/2 top-9 -translate-x-1/2 invisible transition-all;
+}
+.containner-card-episodio:hover > p {
+  @apply text-yellow-400;
+}
+.containner-card-episodio:hover > .icon {
+  @apply visible transition-all;
+}
+.containner-card-episodio:hover > img {
+  @apply filter brightness-50 transition-all;
+}

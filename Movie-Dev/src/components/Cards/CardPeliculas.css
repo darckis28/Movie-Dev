@@ -1,0 +1,15 @@
+.containner-card-peliculas {
+  @apply max-w-52 relative;
+}
+.containner-card-peliculas:hover > img {
+  @apply brightness-50;
+}
+.icono {
+  @apply text-5xl absolute left-1/2 -translate-x-1/2 top-32 invisible;
+}
+.containner-card-peliculas:hover > .icono {
+  @apply visible;
+}
+.containner-card-peliculas:hover > p {
+  @apply text-yellow-500;
+}
