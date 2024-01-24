@@ -1,0 +1,15 @@
+.messaje-containner {
+  @apply w-full bg-gray-800 my-4 h-16 p-2 overflow-y-auto;
+}
+.messaje-containner::-webkit-scrollbar {
+  @apply w-3 rounded-none;
+}
+.messaje-containner::-webkit-scrollbar-track {
+  @apply bg-gray-600
+  /* background: linear-gradient(to bottom, #f1f1f1, #c1c1c1); */;
+}
+.messaje-containner::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-t from-yellow-900 to-yellow-400
+  /* background: linear-gradient(to bottom, #888, #555); */
+  /* border-radius: 6px; */;
+}
