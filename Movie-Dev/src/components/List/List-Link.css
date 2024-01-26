@@ -1,5 +1,5 @@
 .sub--link {
-  @apply text-white flex flex-col flex-wrap max-h-52 gap-x-1 p-2  transition-all
+  @apply text-white flex flex-col flex-wrap lg:max-h-52 gap-x-1 p-2  transition-all
   lg:w-max lg:bg-gray-800 lg:-left-1 lg:translate-y-1 lg:rounded-md lg:absolute   lg:scale-0 lg:hover:scale-100
   lg:before:w-0 lg:before:h-0
   lg:before:absolute lg:before:-top-2 lg:before:left-3

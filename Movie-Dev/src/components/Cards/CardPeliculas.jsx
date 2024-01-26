@@ -10,9 +10,11 @@ function CardPeliculas({ img, title, date }) {
         alt=""
       />
       <p className="text-center text-white">{title}</p>
-      <span className="absolute top-5 right-1 p-1 bg-yellow-500 rounded-2xl text-sm ">
-        {getFecha(date)}
-      </span>
+      {date && (
+        <span className="absolute top-5 right-1 p-1 bg-yellow-500 rounded-2xl text-sm ">
+          {getFecha(date)}
+        </span>
+      )}
       <IoPlayCircleOutline className="icono" />
     </div>
   );

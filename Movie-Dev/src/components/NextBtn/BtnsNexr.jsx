@@ -1,7 +1,7 @@
 import { GrPrevious, GrNext } from "react-icons/gr";
-function BtnsNexr({ page, setPage, direccion }) {
+function BtnsNexr({ page, setPage, direccion, limit = 100 }) {
   function handelNext() {
-    if (page <= 100) {
+    if (page <= limit) {
       setPage(page + 1);
       window.location.href = `#${direccion}`;
     }
@@ -25,10 +25,10 @@ function BtnsNexr({ page, setPage, direccion }) {
       <div className="text-white  px-3 py-2 bg-gray-700 rounded-full flex items-center text-sm dr:text-base">
         <p className=" font-bold">
           <span className=" rounded-full bg-gray-800 py-2 px-4 ">{page}</span>{" "}
-          de 100
+          de {limit}
         </p>
       </div>
-      {page <= 100 && (
+      {page <= limit && (
         <button
           onClick={handelNext}
           className="text-white rounded-full bg-gray-800 p-4 hover:bg-yellow-500 text-sm dr:text-base"

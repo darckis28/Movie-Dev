@@ -32,9 +32,9 @@ function PeliculasOn() {
         </nav>
       </div>
       <article className="w-full mt-9">
-        {state === "Ultimas" && <UltimasP params={"movie/now_playing"} />}
-        {state === "Tendencias" && <UltimasP params={"movie/popular"} />}
-        {state === "Estrenos" && <UltimasP params={"movie/upcoming"} />}
+        {state === "Ultimas" && <UltimasP params={"movie/now_playing?"} />}
+        {state === "Tendencias" && <UltimasP params={"movie/popular?"} />}
+        {state === "Estrenos" && <UltimasP params={"movie/upcoming?"} />}
       </article>
     </section>
   );

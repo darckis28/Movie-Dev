@@ -6,14 +6,14 @@ import "./Episodios.css";
 function Episodios() {
   const [serie, setSerie] = useState([]);
   useEffect(() => {
-    getData(`tv/on_the_air`)
+    getData(`tv/airing_today?`)
       .then(({ results }) => setSerie(results))
       .catch((err) => console.log(err));
   }, []);
   return (
     <section>
       <Title position="left" size={"3xl"} color="wjite">
-        Series
+        Series de TV
       </Title>
       <ul className="containner--episodio">
         {serie.slice(0, 10).map((data) => (

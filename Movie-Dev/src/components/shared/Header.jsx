@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import List_Link from "../List/List_Link";
-import Logo from "../../img/cuevana.png";
+import Logo from "../../assets/img/cuevana.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 function Header() {
@@ -31,20 +31,20 @@ function Header() {
               </Link>
             </li>
             <li className="containner--link">
-              <a href=" " className="link">
+              <Link to="/peliculas" className="link">
                 Películas <IoIosArrowDown />
-              </a>
+              </Link>
               <List_Link
                 category={[
                   "Popular",
                   "Estrenos",
-                  "Tendencias Semanales",
-                  "Tendencias diarias",
+                  "Peliculas Top",
+                  "Peliculas en cartelera",
                 ]}
               />
             </li>
             <li className="containner--link">
-              <a href=" " className="link">
+              <a className="link">
                 Generos <IoIosArrowDown />
               </a>
               <List_Link
@@ -59,18 +59,26 @@ function Header() {
                   "Ciencia Ficcion",
                   "Drama",
                   "Comedia",
+                  "Romance",
+                  "Horror",
+                  "Historia",
+                  "Musica",
+                  "Documentales",
+                  "Fantasia",
+                  "Peliculas de TV",
+                  "Guerra",
+                  "Occidental",
                 ]}
               />
             </li>
             <li className="containner--link">
-              <a href="" className="link">
+              <Link to={"Series"} className="link">
                 Series <IoIosArrowDown />
-              </a>
+              </Link>
               <List_Link
                 category={[
-                  "Series",
-                  "Episodios",
-                  "Estrenos",
+                  "Series Top",
+                  "Al Aire",
                   "Tendencias Semanales",
                   "Tendencias diarias",
                 ]}

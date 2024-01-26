@@ -4,7 +4,7 @@ import getData from "../../data/data";
 function DatePelicula({ date, points, id }) {
   const [detalis, setDetalis] = useState([]);
   useEffect(() => {
-    getData(`movie/${id}`)
+    getData(`movie/${id}?`)
       .then(({ genres }) => setDetalis(genres || []))
       .catch((err) => console.log(err));
   }, [id]);

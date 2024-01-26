@@ -6,7 +6,7 @@ function Recommen_movie() {
   const [top, setTop] = useState({});
   const complete = "https://image.tmdb.org/t/p/original";
   useEffect(() => {
-    getData("movie/top_rated")
+    getData("movie/top_rated?")
       .then(({ results }) => {
         const aleatorio = Math.floor(Math.random() * results.length);
         setTop(results[aleatorio]);

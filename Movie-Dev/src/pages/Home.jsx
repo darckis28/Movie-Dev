@@ -1,4 +1,5 @@
 import ContainnerRes from "../components/Containners/ContainnerRes";
+import CotainnerSec from "../components/Containners/CotainnerSec";
 import Aside from "../components/shared/Aside";
 import Title from "../components/shared/Title";
 import Episodios from "../components/Uniques/Episodios";
@@ -11,13 +12,13 @@ function Home() {
     <>
       <Recommen_movie />
       <ContainnerRes>
-        <section className="col-span-3 ">
+        <CotainnerSec className="col-span-3 ">
           <Title size={"2xl"}>
             Todas las películas de Movie Dev Online Gratis
           </Title>
           <Episodios />
           <PeliculasOn />
-        </section>
+        </CotainnerSec>
         <Aside />
       </ContainnerRes>
     </>

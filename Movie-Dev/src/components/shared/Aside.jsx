@@ -9,10 +9,10 @@ function Aside() {
   const [estrenos, setEstrenos] = useState([]);
   const [proximos, setProximos] = useState([]);
   useEffect(() => {
-    getData(`movie/top_rated`)
+    getData(`movie/top_rated?`)
       .then(({ results }) => setProximos(results.slice(0, 6)))
       .catch((err) => console.log(err));
-    getData("movie/upcoming")
+    getData("movie/upcoming?")
       .then(({ results }) => setEstrenos(results.slice(0, 6)))
       .catch((err) => console.log(err));
   }, []);
