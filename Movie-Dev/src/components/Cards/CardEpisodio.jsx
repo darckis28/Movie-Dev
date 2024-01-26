@@ -1,14 +1,17 @@
 import "./cardEpisodio.css";
 import { FaRegCirclePlay } from "react-icons/fa6";
-function CardEpisodio() {
+function CardEpisodio({ name, img }) {
+  const complete = "https://image.tmdb.org/t/p/original";
   return (
     <div className="containner-card-episodio">
       <img
         className="w-52 rounded-xl transition-all"
-        src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg"
+        src={complete + img}
         alt=""
       />
-      <p className="text-center transition-all">imagen piola</p>
+      <p className="text-center transition-all text-nowrap w-52 text-ellipsis overflow-hidden px-2">
+        {name}
+      </p>
       <FaRegCirclePlay className="icon" />
     </div>
   );

@@ -6,6 +6,7 @@ import { MdOutlineClose } from "react-icons/md";
 import List_Link from "../List/List_Link";
 import Logo from "../../img/cuevana.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function Header() {
   const [interruptor, setInterruptor] = useState(false);
   function active() {
@@ -15,9 +16,9 @@ function Header() {
     <header className={`header ${interruptor && "active"}`}>
       <div className="nav">
         <div className="flex items-center justify-between w-full px-5 lg:w-4/6 z-20  ">
-          <a href="">
+          <Link to={"/"}>
             <img className=" w-52  sm:w-60" src={Logo} alt="" />
-          </a>
+          </Link>
           <button className="btn--click " onClick={active}>
             {interruptor ? <MdOutlineClose /> : <GiHamburgerMenu />}
           </button>
@@ -25,9 +26,9 @@ function Header() {
         <nav className="navigator--containner">
           <ul className="containner--nav">
             <li className="containner--link">
-              <a href="" className="link">
+              <Link to={"/"} className="link">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className="containner--link">
               <a href=" " className="link">
@@ -35,7 +36,7 @@ function Header() {
               </a>
               <List_Link
                 category={[
-                  "Ultimas Peliculas",
+                  "Popular",
                   "Estrenos",
                   "Tendencias Semanales",
                   "Tendencias diarias",

@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import "./List-Link.css";
-function List_Link({ category, href }) {
+function List_Link({ category, reft }) {
   return (
     <div className="sub--link">
       {category.map((cate, idx) => (
-        <a key={idx} href="">
+        <Link key={idx} to={cate.split(" ").join("_")}>
           {cate}
-        </a>
+        </Link>
       ))}
     </div>
   );

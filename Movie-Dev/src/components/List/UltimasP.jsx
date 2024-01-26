@@ -6,9 +6,7 @@ import Lading from "../Load/Lading";
 function UltimasP({ params }) {
   const [list, setList] = useState([]);
   useEffect(() => {
-    setTimeout(() => {
-      getData(params).then(({ results }) => setList(results));
-    }, 2000);
+    getData(params).then(({ results }) => setList(results));
   }, [params]);
   return (
     <ul className="w-full flex flex-wrap gap-5 justify-center">

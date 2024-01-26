@@ -10,9 +10,11 @@ const getData = async (parrams) => {
   };
   const idioma = "?language=es";
   try {
-    const response = await fetch(API_URL + parrams + idioma, options);
-    const data = await response.json();
-    return data;
+    if (parrams) {
+      const response = await fetch(API_URL + parrams + idioma, options);
+      const data = await response.json();
+      return data;
+    }
   } catch (err) {
     console.log(err);
   }

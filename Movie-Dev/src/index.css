@@ -5,3 +5,15 @@
 body {
   @apply bg-gray-950;
 }
+body::-webkit-scrollbar {
+  @apply w-3 rounded-none;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-gray-600
+  /* background: linear-gradient(to bottom, #f1f1f1, #c1c1c1); */;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-t from-yellow-900 to-yellow-400
+  /* background: linear-gradient(to bottom, #888, #555); */
+  /* border-radius: 6px; */;
+}

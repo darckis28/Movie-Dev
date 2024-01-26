@@ -1,20 +1,17 @@
-function CardX() {
+import DatePelicula from "../Date/DatePelicula";
+
+function CardX({ name, img, fecha, points, id }) {
+  const complete = "https://image.tmdb.org/t/p/original";
   return (
     <div className="flex gap-4">
       <img
-        className="w-20 rounded-lg"
-        src="https://images-cdn.ubuy.co.in/63527edf3492081cbd062a28-hislooks-naruto-poster-anime-wall-art.jpg"
+        className="w-32   md:w-20 rounded-lg"
+        src={`${complete}${img}`}
         alt=""
       />
       <div className=" pt-2">
-        <h4 className=" font-light">Naruto</h4>
-        <div className=" font-extralight text-sm flex gap-3 items-center">
-          <span className="text-yellow-500 text-base">
-            5/<sub>10</sub>{" "}
-          </span>
-          <span>1h 58min</span>
-          <span>2023</span>
-        </div>
+        <h4 className=" font-light">{name}</h4>
+        <DatePelicula date={fecha} points={points} id={id} />
       </div>
     </div>
   );

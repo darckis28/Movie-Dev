@@ -9,7 +9,7 @@ function DatePelicula({ date, points, id }) {
       .catch((err) => console.log(err));
   }, [id]);
   return (
-    <div className=" font-extralight text-sm flex gap-3 items-center">
+    <div className=" font-extralight text-sm flex flex-wrap gap-3 items-center">
       <span className="text-yellow-500 text-base">
         {getPoints(points)}/<sub>10</sub>{" "}
       </span>
