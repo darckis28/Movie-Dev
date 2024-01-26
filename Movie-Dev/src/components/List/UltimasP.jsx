@@ -6,6 +6,7 @@ import Lading from "../Load/Lading";
 function UltimasP({ params }) {
   const [list, setList] = useState([]);
   useEffect(() => {
+    setList([]);
     getData(params).then(({ results }) => setList(results));
   }, [params]);
   return (
