@@ -13,8 +13,10 @@ function DatePelicula({ date, points, id }) {
       <span className="text-yellow-500 text-base">
         {getPoints(points)}/<sub>10</sub>{" "}
       </span>
-      <span>{points && getFecha(date)}</span>
-      <span>{detalis.length > 0 && detalis[0].name}</span>
+      <span className="text-white">{points && getFecha(date)}</span>
+      <span className="text-white">
+        {detalis.length > 0 && detalis[0].name}
+      </span>
     </div>
   );
 }

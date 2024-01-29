@@ -7,7 +7,7 @@ import BtnsNexr from "../NextBtn/BtnsNexr";
 import Aside from "../shared/Aside";
 import Title from "../shared/Title";
 
-function ContentPage({ category, title, link = "discover/movie" }) {
+function ContentPage({ category, title, link = "discover/movie", tipo }) {
   const [page, setPage] = useState(1);
   document.title = `${title}`;
   return (
@@ -23,6 +23,7 @@ function ContentPage({ category, title, link = "discover/movie" }) {
               params={`${link}?`}
               query={`with_genres=${category}&page=${page}&`}
               title={"Peliculas de Animacion"}
+              tipo={tipo}
             />
           </div>
           <BtnsNexr

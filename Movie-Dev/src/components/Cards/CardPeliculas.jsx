@@ -1,9 +1,13 @@
 import { IoPlayCircleOutline } from "react-icons/io5";
 import "./cardPeliculas.css";
 import { getFecha, getPoster } from "../../utilities/convertes";
-function CardPeliculas({ img, title, date }) {
+import { Link } from "react-router-dom";
+function CardPeliculas({ img, title, date, id, tipo }) {
   return (
-    <div className="containner-card-peliculas w-full sm:w-52">
+    <Link
+      to={`../${tipo}/${id}`}
+      className="containner-card-peliculas w-full sm:w-52"
+    >
       <img
         className="w-full sm:h-60 object-cover"
         src={getPoster(img)}
@@ -16,7 +20,7 @@ function CardPeliculas({ img, title, date }) {
         </span>
       )}
       <IoPlayCircleOutline className="icono" />
-    </div>
+    </Link>
   );
 }
 

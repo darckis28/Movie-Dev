@@ -21,6 +21,7 @@ function Episodios() {
             key={data.id}
             name={data.name}
             img={data.backdrop_path}
+            id={data.id}
           />
         ))}
       </ul>
