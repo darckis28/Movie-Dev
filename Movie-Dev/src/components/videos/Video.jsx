@@ -20,7 +20,7 @@ function Video({ id }) {
           title={video.name}
           // frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          // allowfullscreen
         ></iframe>
       ) : (
         <div className="w-3/4 h-[450px] mx-auto flex items-center justify-center bg-black rounded-md ">

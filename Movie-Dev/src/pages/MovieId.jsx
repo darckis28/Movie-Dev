@@ -22,15 +22,15 @@ function MovieId() {
       ></div>
       <main className=" z-10 w-full bg-gradient-to-t to-initial via-secund from-gray-950 pt-44 ">
         <main>
-          <article className="flex mx-28 gap-10">
-            <figure className="w-48">
+          <article className="flex  gap-10 flex-col md:mx-28 md:flex-row">
+            <figure className="mx-auto w-4/5 md:w-48">
               <img
                 src={getPoster(movie.poster_path)}
                 alt=""
                 className="w-full rounded-lg"
               />
             </figure>
-            <section className="w-3/4">
+            <section className="px-5 md:px-0 md:w-3/4">
               <Title color="white" position="left" size={"3xl"}>
                 {movie.title}
               </Title>
