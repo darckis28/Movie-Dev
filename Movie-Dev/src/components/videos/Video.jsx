@@ -15,7 +15,7 @@ function Video({ id }) {
     <div className="w-full mt-8">
       {video ? (
         <iframe
-          className="w-3/4 h-[450px] mx-auto"
+          className="w-3/4 h-[350px]  dr:h-[450px] mx-auto"
           src={`https://www.youtube.com/embed/${video.key}`}
           title={video.name}
           // frameborder="0"
