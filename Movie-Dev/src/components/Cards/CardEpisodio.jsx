@@ -8,7 +8,7 @@ function CardEpisodio({ name, img, id }) {
       <img
         className="w-52 rounded-xl transition-all"
         src={complete + img}
-        alt=""
+        alt={name}
       />
       <p className="text-center transition-all text-nowrap w-52 text-ellipsis overflow-hidden px-2">
         {name}

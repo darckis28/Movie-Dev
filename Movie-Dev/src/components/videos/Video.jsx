@@ -6,11 +6,10 @@ function Video({ id }) {
   useEffect(() => {
     if (id) {
       getData(`movie/${id}/videos?`)
-        .then(({ results }) => setVideo(results[0]))
+        .then(({ results }) => setVideo(results[1]))
         .catch((e) => console.log(e));
     }
   }, [id]);
-  console.log(video);
   return (
     <div className="w-full mt-8">
       {video ? (
@@ -23,7 +22,7 @@ function Video({ id }) {
           // allowfullscreen
         ></iframe>
       ) : (
-        <div className="w-3/4 h-[450px] mx-auto flex items-center justify-center bg-black rounded-md ">
+        <div className="w-3/4 h-[450px] mx-auto flex items-center justify-center bg-black rounded-md border border-yellow-500 ">
           <h2 className="text-white text-3xl">Not Video</h2>
         </div>
       )}

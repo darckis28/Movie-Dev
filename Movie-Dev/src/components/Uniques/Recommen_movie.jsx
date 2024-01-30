@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getData from "../../data/data";
 import "./Recomendacion-Movie.css";
 import DatePelicula from "../Date/DatePelicula";
+import { Link } from "react-router-dom";
 function Recommen_movie() {
   const [top, setTop] = useState({});
   const complete = "https://image.tmdb.org/t/p/original";
@@ -29,7 +30,9 @@ function Recommen_movie() {
         <p className="dr:text-xl font-light text-gray-400 pb-7 text-xs">
           {top.overview}
         </p>
-        <button className="btn btn--yellow">Ver Pelicula</button>
+        <Link to={`movie/${top.id}`} className="btn btn--yellow">
+          Ver Pelicula
+        </Link>
       </div>
     </article>
   );

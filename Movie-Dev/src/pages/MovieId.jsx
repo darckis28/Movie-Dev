@@ -5,15 +5,21 @@ import { getPoster } from "../utilities/convertes.js";
 import Title from "../components/shared/Title.jsx";
 import DatePelicula from "../components/Date/DatePelicula.jsx";
 import Video from "../components/videos/Video.jsx";
+import Generos from "../components/Genero/Generos.jsx";
+import ContainnerRes from "../components/Containners/ContainnerRes.jsx";
+import CotainnerSec from "../components/Containners/CotainnerSec.jsx";
+import Companias from "../components/Genero/Companias.jsx";
+import Aside from "../components/shared/Aside.jsx";
+import Similar from "../components/Uniques/Similar.jsx";
+import RecomendacionMov from "../components/Uniques/RecomendacionMov.jsx";
 
 function MovieId() {
   const { movieID } = useParams();
   const [movie, setMovie] = useState({});
   useEffect(() => {
     getData(`movie/${movieID}?`).then((data) => setMovie(data));
-  }, []);
-  console.log(movie);
-
+  }, [movieID]);
+  document.title = movie.title;
   return (
     <div className="relative min-h-screen w-full ">
       <div
@@ -31,7 +37,7 @@ function MovieId() {
               />
             </figure>
             <section className="px-5 md:px-0 md:w-3/4">
-              <Title color="white" position="left" size={"3xl"}>
+              <Title color="white" position="left" size={"3xl"} etiqueta={true}>
                 {movie.title}
               </Title>
               <span className="text-gray-400 font-extralight text-lg">
@@ -47,10 +53,19 @@ function MovieId() {
               <p className="text-gray-400 font-light text-sm ">
                 {movie.overview}
               </p>
+              <Generos listGen={movie.genres} />
+              <Companias listCompanys={movie.production_companies} />
             </section>
           </article>
           <Video id={movie.id} />
         </main>
+        <ContainnerRes>
+          <CotainnerSec>
+            <Similar id={movie.id} titleMovie={movie.title} />
+            <RecomendacionMov id={movie.id} />
+          </CotainnerSec>
+          <Aside />
+        </ContainnerRes>
       </main>
       {/* <img src={getPoster(movie.backdrop_path)} alt="" /> */}
     </div>

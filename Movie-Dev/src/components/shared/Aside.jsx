@@ -39,14 +39,15 @@ function Aside() {
         <section className=" w-full mt-5 flex justify-center md:justify-start">
           <ul className=" flex flex-col gap-2  ">
             {proximos.map((data) => (
-              <CardX
-                key={data.id}
-                name={data.title}
-                img={data.poster_path}
-                fecha={data.release_date}
-                points={data.vote_average}
-                id={data.id}
-              />
+              <li key={data.id}>
+                <CardX
+                  name={data.title}
+                  img={data.poster_path}
+                  fecha={data.release_date}
+                  points={data.vote_average}
+                  id={data.id}
+                />
+              </li>
             ))}
           </ul>
         </section>

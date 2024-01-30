@@ -11,7 +11,7 @@ function CardPeliculas({ img, title, date, id, tipo }) {
       <img
         className="w-full sm:h-60 object-cover"
         src={getPoster(img)}
-        alt=""
+        alt={title}
       />
       <p className="text-center text-white">{title}</p>
       {date && (
