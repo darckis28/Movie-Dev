@@ -1,4 +1,4 @@
-import Logo from "../../assets/img/cuevana.png";
+import Logo from "../../assets/img/portadaMovieDEv.png";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
 function Footer() {

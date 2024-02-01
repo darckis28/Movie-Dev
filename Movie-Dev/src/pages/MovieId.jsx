@@ -21,7 +21,7 @@ function MovieId() {
   }, [movieID]);
   document.title = movie.title;
   return (
-    <div className="relative min-h-screen w-full ">
+    <section className="relative min-h-screen w-full ">
       <div
         style={{ backgroundImage: `url("${getPoster(movie.backdrop_path)}")` }}
         className="w-full h-screen bg-cover bg-center -z-10 absolute top-0 left-0"
@@ -68,7 +68,7 @@ function MovieId() {
         </ContainnerRes>
       </main>
       {/* <img src={getPoster(movie.backdrop_path)} alt="" /> */}
-    </div>
+    </section>
   );
 }
 

@@ -7,7 +7,9 @@ function UltimasP({ params, query, tipo }) {
   const [list, setList] = useState([]);
   useEffect(() => {
     setList([]);
-    getData(params, query).then(({ results }) => setList(results));
+    getData(params, query)
+      .then(({ results }) => setList(results))
+      .catch((err) => console.log(err));
   }, [params, query]);
   return (
     <ul className="w-full flex flex-wrap gap-5 justify-center">

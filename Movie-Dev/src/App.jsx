@@ -35,6 +35,7 @@ import TendenciaSemana from "./pages/Series/TendenciaSemana";
 import TEndenciaDiaria from "./pages/Series/TEndenciaDiaria";
 import MovieId from "./pages/MovieId";
 import SerieId from "./pages/SerieId";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
         <Route path="Tendencias_diarias" element={<TEndenciaDiaria />} />
         <Route path="movie/:movieID" element={<MovieId />} />
         <Route path="serie/:serieID" element={<SerieId />} />
+        <Route path="search/:searchpick" element={<Search />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />
