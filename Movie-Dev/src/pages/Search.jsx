@@ -11,7 +11,7 @@ function Search() {
       .then((data) => setSearch(data.results))
       .catch((err) => console.log(err));
   }, [searchpick]);
-  console.log(search);
+  document.title = `Search - ${searchpick}`;
   return (
     <div className=" pt-32 px-4 min-h-[100vh - 272px]">
       {search.length > 1 ? (
